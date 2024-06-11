@@ -31,14 +31,53 @@
 	许可证:
 	GPL2.0,3.0.Apahce 2.0.Mit,这些许可证，给使用者最大使用权限以及最少的限制
 
+## 设备认证
+### 如何让网站的账户与设备绑定，后续完成代码的管理，上传下载
+	git init                       //创建本地仓库 后续对仓库的操作，都要在仓库位置(master)
+	git config --list              //查看git的配置文件
+	git config --global user.email "邮箱"
+	git config --global user.name "用户名"
+	ssh-keygen -trsa -C "注册邮箱" //创建本地密文
 
+	去对应的目录查找密文文件rsa.pub 复制密文,粘贴settings->sSH key and GPG>new ssh key->粘贴
 
+	ssh -T git@github.com          //测试关联是否成功
 
+### 为目标仓库起别名，定位目标仓库，后续上传
+	git remote add orgin "ssh地址" //为ssh仓库地址创建别名为origin
+	git remote remote orgin        //删除orgin别名
+### 本地设备与云端仓库的交互逻辑
 
+	git add xx		       //送到缓冲区
+	git commit -m "提交说明(中/英)"//提交到本地仓库
+	git push origin master 	       //上传云端
+	如果上的本地分支与云端默认分支一致，合并分支不一致，云端创建新分支
+	git add xx		       //添加内容
+	git rm xx		       //删除本地文件井删除仓库数据
+	git restroe xx 		       //恢复被删除(仓库存在rm删除)
+	git status		       //查看当前状态
+### 代码更新的依赖关系被破坏
+	本地内容要比云端新，完成更新替换，，但是如果直接修改云端内容，导致，本地内容无法再次提交
 
+	先拉取 git pul 云端内容 与本地内容合并或操作，而后再次推即可
+	git pull--rebase origin master
+	git rebase --skip 	      //忽略旧内容 更新本地后可以上传
+	git rebase --abort            //忽略新内容 不能上传
+	git rebase --continue	      //合并内容 解决冲突后可以上传
 
+## 下载开源代码
+	找到下载地址(HTTPS)复制
+	git clone "地址"	//下载 下载后的在仓库文件夹中
+	rm 文件			//删除文件
+	git rm 文件
+	git commit -m "文件"	//提交删除
+	git push orgin master	//上传云端
+## 删除仓库
 
-
+## 分支Branch
+	关于分支的相关命令，创建分支、 选择分支、合并分支等等
+## Markdown 语言
+	github可以编事readme，文本修饰语言
 
 Markdown,文本修饰语言，用特殊符号修饰正文效果<br>
 
