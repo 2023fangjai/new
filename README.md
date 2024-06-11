@@ -21,6 +21,7 @@ Markdown,文本修饰语言，用特殊符号修饰正文效果<br>
 	
    ~~一段测试文本~~
 
+   一段测试`文本`
 ## 分割线
    用\-\-\- 表示分割线
 
@@ -54,3 +55,33 @@ Markdown,文本修饰语言，用特殊符号修饰正文效果<br>
    * aa
     2. aaa
 
+### 表格
+一|二|三
+--|:--:|--:|
+左|中|右
+阿萨|飒飒大|的说法是
+
+### 代码片段
+```c
+	#include<stdio.h>
+	int main(void)
+	{
+		printf("test\n");
+		return 0;
+	}
+```
+```cpp
+	#include<iostream>
+```
+```python
+	import <os>
+```
+```bash
+	echo "命令"
+```
+
+### 超链接技术
+[Github](https://www.github.com "悬停标题")
+
+### 插入图片
+![图片](C://Users//jxk20//Desktop//6.6.jpg "悬停标题")
