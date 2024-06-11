@@ -1,3 +1,25 @@
+# Github
+
+### 关键字查询:
+	xx awesome  按标签搜索，去此标签类别中查询项目<br>
+	xx tutorial 查询资料 书籍 文档<br>
+	xx sampile  查询对应技术样本<br>
+## Github三要素
+### 仓库
+	github 基本存储单位
+	一个仓库储存一个项目 一个用户可以拥有多个仓库
+	一般仓库分为public开源 private私有
+
+
+
+
+
+
+
+
+
+
+
 Markdown,文本修饰语言，用特殊符号修饰正文效果<br>
 
 ## 标题修饰符\#
