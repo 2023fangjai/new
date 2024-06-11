@@ -2,7 +2,8 @@
 
 int main()
 {
-	printf("test code\n");
+	printf(" code\n");
+	printf("1");
 	return 0;
 }
 
