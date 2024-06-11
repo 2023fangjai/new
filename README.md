@@ -38,7 +38,7 @@
 	git config --global user.email "邮箱"
 	git config --global user.name "用户名"
 	ssh-keygen -trsa -C "注册邮箱" //创建本地密文
-![图片](C://Users//jxk20//Desktop//图片//4.png "点击查看")
+![图片](C://Users//jxk20//Desktop//图片//4.png "点击查看")<br>
 	去对应的目录查找密文文件rsa.pub 复制密文,粘贴settings->sSH key and GPG>new ssh key->粘贴
 
 	ssh -T git@github.com          //测试关联是否成功
@@ -47,7 +47,7 @@
 	git remote add orgin "ssh地址" //为ssh仓库地址创建别名为origin
 	git remote remote orgin        //删除orgin别名
 ### 本地设备与云端仓库的交互逻辑
-![图片](C://Users//jxk20//Desktop//图片//3.png "点击查看")
+![图片](C://Users//jxk20//Desktop//图片//3.png "点击查看")<br>
 	git add xx		       //送到缓冲区
 	git commit -m "提交说明(中/英)"//提交到本地仓库
 	git push origin master 	       //上传云端
@@ -58,7 +58,7 @@
 	git status		       //查看当前状态
 ### 代码更新的依赖关系被破坏
 	本地内容要比云端新，完成更新替换，，但是如果直接修改云端内容，导致，本地内容无法再次提交
-![图片](C://Users//jxk20//Desktop//图片//5.png "点击查看")
+![图片](C://Users//jxk20//Desktop//图片//5.png "点击查看")<br>
 	先拉取 git pul 云端内容 与本地内容合并或操作，而后再次推即可
 	git pull--rebase origin master
 	git rebase --skip 	      //忽略旧内容 更新本地后可以上传
